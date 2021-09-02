@@ -1,0 +1,193 @@
+doctype html
+// コメント
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    title StayWorld
+    link(rel='icon' href='img/favicon.png')
+    link(rel='stylesheet' href='./css/modules/loader.css')
+    script(src='scripts/vendors/pace.js')
+
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Kameron&family=Noto+Sans+JP:wght@400;500&display=swap' rel='stylesheet')
+
+    link(href="./css/vendors/bootstrap-reboot.css" rel="stylesheet")
+    link(href="./css/vendors/swiper.min.css" rel="stylesheet")
+    link(href="./css/style.css" rel="stylesheet")
+
+  body
+    //- p test
+    //- include components/slide.pug
+    //- include components/findHouse.pug
+
+
+    #global-container
+      #container
+        div(class='mobile-menu__cover')
+        .nav-trigger
+        header.header
+          div(class='header__inner appear up')
+            .logo.item
+              img(src='img/logo.svg' alt='' class='logo__img')
+              span(class='logo__stay') Stay
+              span(class='logo__world') World
+            nav(class='header__nav')
+              ul(class='header__ul')
+                li(class='header__li item')
+                  a(href='#') Service
+                li(class='header__li item')
+                  a(href='#') Company
+                li(class='header__li item')
+                  a.btn.filled(href='#') Contact
+            button(class='mobile-menu__btn')
+              span
+              span
+              span
+        #content
+          .hero
+            .swiper-container
+              .swiper-wrapper
+                .swiper-slide
+                  div(class='hero__title') Enjoy Rich
+                  img(src='img/image-1.jpg' alt='')
+                .swiper-slide
+                  div(class='hero__title') Fantastic
+                  img(src='img/image-2.jpg' alt='')
+                .swiper-slide
+                  div(class='hero__title') Experience
+                  img(src='img/image-3.jpg' alt='')
+              div(class='hero__footer')
+                img(class='hero__downarrow' src='img/arrow.svg')
+                span(class='hero__scrolltext') scroll
+          #main-content
+            aside.side.left
+              div(class='side__inner')
+                a.twitter.icon.tween-animate-title(href='#') Twitter
+                a.fb.icon.tween-animate-title(href='#') Facebook
+            main
+              section.travel
+                div(class='travel__inner')
+                  div(class='travel__img cover-slide')
+                    img.img-zoom(src='img/image-travel.jpg' alt='')
+                  div(class='travel__texts appear left')
+                    div(class='travel__texts-inner')
+                      div(class='travel__title main-title item')
+                        span.purple Travel
+                        span the world
+                      div(class='travel__sub sub-title item') 世界中を旅しよう
+                      div(class='travel__description item')
+                        p
+                          | 世界１５０ヶ国で
+                          br
+                          | 利用できる民泊サービスです。
+                        p あなたの望む宿がきっと見つかります。
+                      div(class='travel__btn item')
+                        button.btn.filled もっと詳しく
+              section.houses
+                div
+                  h2.main-title.tween-animate-title Find Your House
+                  p.sub-title.tween-animate-title お気に入りの宿泊先を見つけましょう
+                div(class='houses__inner')
+                  div(class='houses__item')
+                    .cover-slide.hover-darken
+                      .bg-img-zoom.img-bg50(style='background-image: url(img/villa-1.jpg)')
+                    p(class='houses__title') House 1
+                  div(class='houses__item')
+                    .cover-slide.hover-darken
+                      .bg-img-zoom.img-bg50(style='background-image: url(img/villa-2.jpg)')
+                    p(class='houses__title') House 2
+                  div(class='houses__item')
+                    .cover-slide.hover-darken
+                      .bg-img-zoom.img-bg50(style='background-image: url(img/villa-3.jpg)')
+                    p(class='houses__title') House 3
+                  div(class='houses__item')
+                    .cover-slide.hover-darken
+                      .bg-img-zoom.img-bg50(style='background-image: url(img/villa-4.jpg)')
+                    p(class='houses__title') House 4
+                  div(class='houses__item')
+                    .cover-slide.hover-darken
+                      .bg-img-zoom.img-bg50(style='background-image: url(img/villa-5.jpg)')
+                    p(class='houses__title') House 5
+                  div(class='houses__item')
+                    .cover-slide.hover-darken
+                      .bg-img-zoom.img-bg50(style='background-image: url(img/villa-6.jpg)')
+                    p(class='houses__title') House 6
+                  div(class='houses__btn appear up')
+                    button.btn.slide-bg.item もっと詳しく
+              section.popular
+                div(class='popular__header')
+                  h2.main-title.tween-animate-title Popular Place
+                  p.sub-title.tween-animate-title 人気の観光地で宿泊先を見つけましょう
+                div(class='popular__inner appear up')
+                  div(class='popular__container')
+                    div(class='popular__item item')
+                      div(class='popular__img')
+                        img(src='img/image-p1.jpg' alt='')
+                      div(class='popular__title') パリ
+                    div(class='popular__item item')
+                      div(class='popular__img')
+                        img(src='img/image-p2.jpg' alt='')
+                      div(class='popular__title') ニューヨーク
+                    div(class='popular__item item')
+                      div(class='popular__img')
+                        img(src='img/image-p3.jpg' alt='')
+                      div(class='popular__title') 香港
+                    div(class='popular__item item')
+                      div(class='popular__img')
+                        img(src='img/image-p4.jpg' alt='')
+                      div(class='popular__title') 大阪
+                    div(class='popular__btn appear up')
+                      button.btn.cover-3d.item
+                        span
+                          | 一覧から探す
+            aside.side.right
+              div(class='side__inner')
+                span.tween-animate-title &copy;Code Mafia
+        footer.footer.appear.up
+          .logo.item
+            img(src='img/logo.svg' alt='' class='logo__img')
+            span(class='logo__stay') Stay
+            span(class='logo__world') World
+          nav(class='footer__nav')
+            ul(class='footer__ul')
+              li(class='footer__li item')
+                a(href='#') Service
+              li(class='footer__li item')
+                a(href='#') Contact
+              li(class='footer__li item')
+                a(href='#') Company
+              li(class='footer__li item')
+                a(href='#') Sitemap
+            div(class='footer__copyright item')
+              | &copy; Code Mafia
+      nav.mobile-menu
+        .logo
+          img(src='img/logo.svg' alt='' class='logo__img')
+          span(class='logo__stay') Stay
+          span(class='logo__world') World
+        ul(class='mobile-menu__main')
+          li(class='mobile-menu__item')
+            a(class='mobile-menu__link' href='#')
+              span.main-title Our Service
+              span.sub-title サービスについて
+          li(class='mobile-menu__item')
+            a(class='mobile-menu__link' href='#')
+              span.main-title About Us
+              span.sub-title 私たちについて
+          li(class='mobile-menu__item')
+            a(class='mobile-menu__link' href='#')
+              span.main-title Contact Us
+              span.sub-title コンタクト方法
+
+
+
+
+    script(src='js/vendors/swiper.min.js')
+    script(src='js/vendors/TweenMax.min.js')
+    script(src='js/vendors/scroll-polyfill.js')
+    script(src='js/libs/scroll.js')
+    script(src='js/libs/text-animation.js')
+    script(src='js/libs/hero-slider.js')
+    script(src='js/libs/mobile-menu.js')
+    script(src='js/main.js')

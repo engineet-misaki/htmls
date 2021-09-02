@@ -1,0 +1,34 @@
+doctype html
+// コメント
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    link(href="./css/style.css", rel="stylesheet")
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    title テンプレート
+    
+  body
+    include components/parts/header.pug
+    section
+      .container
+        .pickup
+          include components/parts/small-card.pug
+          include components/parts/small-card.pug
+          include components/parts/small-card.pug
+
+    section
+      .container
+        .row
+          .col-12.col-md-8
+            include components/parts/big-card.pug
+            include components/parts/big-card.pug
+            include components/parts/big-card.pug
+          .d-none.d-md-block.col-4
+            include components/parts/profeal.pug
+            include components/parts/ranking.pug
+            include components/parts/archive.pug
+
+    include components/parts/footer.pug
+    
+    script(src="./js/main.js") 

@@ -1,0 +1,27 @@
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+body {
+  font-family: 'Kameron', 'Noto Sans JP', sans-serif;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+p {
+  margin: 0;
+}
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: $contentMaxWidth;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  position: relative;
+}

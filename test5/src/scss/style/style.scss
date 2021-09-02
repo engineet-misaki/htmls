@@ -1,0 +1,144 @@
+$bg: #f3f3f3;
+$key: #bfa34b;
+$main: #1e0606;
+
+@import url(../bootstrap/bootstrap.scss);
+
+
+* {
+    margin: 0;
+    color: $main;
+}
+
+html body {
+    background-color: $bg;
+}
+
+a {
+    &, &:link, &:visited, &:hover, &:active {
+        text-decoration: none;
+        color: $main;
+        cursor: pointer;
+    }
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+}
+
+.header {
+        background-color: white;
+        padding: 20px 0 40px 0;
+        .icon {
+            display: flex;
+            justify-content: space-evenly;
+            width: 150px;
+            margin-left: auto;
+            margin-right: 5px;
+    
+            .iconp {
+                width: 20px;
+                background-color: $key;
+            }
+        }
+        .title {
+            text-align: center;
+            font-weight: 900;
+            font-size: xx-large;
+            span {
+                font-size: smaller;
+            }
+        }
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 10% 0 10%;
+            list-style: none;
+            padding: 0;
+        }
+}
+
+article {
+    margin: 20px 0;
+    display: flex;
+    .picture {
+        flex-basis: 300px;
+        flex-shrink: 0;
+    }
+    .content {
+        background-color: white;
+
+        .side {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+            .time {
+                font-weight: 700;
+            }
+            .type {
+                padding: 5px 10px;
+                background-color: $key;
+                color: white;
+            }
+        }
+        .c-title {
+            margin: 20px;
+        }
+    }
+}
+
+aside {
+    margin: 20px 0;
+
+    .category {
+        margin-top: 20px;
+        .category-title {
+            text-align: center;
+            color: #fff;
+            background-color: $key;
+            padding: 5px;
+            font-size:medium;
+            margin: 0;
+        }
+        .category-con {
+            font-weight: 700;
+            background-color: white;
+            border: rgb(177, 177, 177);
+            padding: 10px;
+        }
+    }
+}
+
+footer {
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    .footer-container {
+        display: flex;
+        justify-content: center;
+        .title {
+            text-align: center;
+            font-weight: 900;
+            font-size: xx-large;
+            margin-right: 50px;
+            span {
+                font-size: smaller;
+            }
+        }
+        p {
+            font-size: small;
+        }
+    }
+    hr {
+        margin: 30px 0;
+    }
+    p {
+        text-align: center;
+    }
+}

@@ -1,0 +1,38 @@
+doctype html
+// コメント
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    title copy
+    link(rel='icon' href='img/favicon.png')
+
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Kameron&family=Noto+Sans+JP:wght@400;500&display=swap' rel='stylesheet')
+
+    link(href="./css/vendors/bootstrap-reboot.css" rel="stylesheet")
+    link(href="./css/style.css" rel="stylesheet")
+
+  body
+    include components/header.pug
+    main 
+      .content1 
+        include components/hero-slide.pug
+      .content2 
+        include components/text-content.pug
+      .content3 
+        include components/conpetency-content.pug
+      .content4 
+        include components/card-content.pug
+
+    include components/footer.pug
+
+
+    script(src='js/vendors/swiper.min.js')
+    script(src='js/vendors/TweenMax.min.js')
+    script(src='js/vendors/scroll-polyfill.js')
+    script(src='js/libs/scroll.js')
+    script(src='js/libs/text-animation.js')
+    script(src='js/libs/hero-slider.js')
+    script(src='js/libs/mobile-menu.js')
+    script(src='js/main.js')

@@ -1,0 +1,110 @@
+@import "../bootstrap/bootstrap.scss";
+
+.header-container {
+    margin: 10px 10%;
+    height: 60px;
+    // position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .profile {
+        // position: absolute;
+        // top: 50%;
+        // left: 0%;
+        // transform: translateY(-50%);
+        // display: inline-block;
+        background-color: grey;
+        color: honeydew;
+        font-weight: bolder;
+        padding: 3px;
+        text-decoration: none;
+        &:link, &:visited, &:hover, &:active {
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    .header {
+        // position: absolute;
+        // top: 50%;
+        // right: 0%;
+        // transform: translateY(-50%);
+        // display: inline-block;
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
+        a {
+            padding: 5px;
+            text-decoration: none;
+            &, &:link, &:visited, &:hover, &:active {
+                color: gray;
+                cursor: pointer;
+            }
+
+        }
+    }
+}
+
+.mainvisual {
+    object-fit: cover;
+}
+
+.main1 {
+    text-align: center;
+    margin-top: 30px;
+
+    h1 {
+        display: inline-block;
+        margin: 40px;
+        padding-bottom: 15px;
+        border-bottom: solid;
+    }
+
+    .content {
+        .content-img {
+            display: inline-block;
+            margin: 0 auto;
+            padding-right: 10px;
+
+            img {
+                border-radius: 50%;
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+        .content-text {
+            display: inline-block;
+            text-align: left;
+    
+            h2 {
+                color: gray;
+            }
+            p {
+                font-size: large;
+            }
+        }
+
+        .pic img {
+            object-fit: cover;
+            width: 100%;
+            padding: 12px;
+        }
+
+        .pic p {
+            margin: 20px;
+        }
+    }
+
+
+}
+
+.footer {
+    text-align: center;
+    margin-top: 100px;
+    h6 {
+        color: gray;
+    }
+}

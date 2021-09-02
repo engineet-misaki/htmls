@@ -1,0 +1,19 @@
+doctype html
+// コメント
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    link(href="./css/style.css", rel="stylesheet")
+    title テンプレート
+    
+  body
+    include components/header.pug
+
+    img(src="./img/mainvisual.jpg", alt="mainvisual", width="100%", height="50%").mainvisual
+
+    include components/main.pug
+
+    include components/footer.pug
+  
+
+    script(src="./js/main.js") 

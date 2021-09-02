@@ -1,0 +1,23 @@
+doctype html
+// コメント
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    link(href="./css/style.css", rel="stylesheet")
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    title テンプレート
+    
+  body
+    include components/header.pug
+    include components/main-v.pug
+    .container 
+      .row 
+        .article.col-lg-8.col-12
+          include components/article.pug
+          include components/article.pug
+          include components/article.pug
+        .aside.col-lg-4.col-12
+          include components/aside.pug
+    include components/footer.pug
+    
+    script(src="./js/main.js")

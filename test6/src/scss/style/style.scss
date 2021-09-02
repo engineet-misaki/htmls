@@ -1,0 +1,199 @@
+
+
+@mixin animation(
+    $name,
+    $duration: 1s,
+    $timing: ease,
+    $delay: 0s,
+    
+    ) {
+        animation: {
+            name: $name;
+            duration: $duration;
+            timing-function: $timing;
+            delay: $delay;
+            // iteration-count: infinite;
+        }
+}
+
+.tes {
+    :nth-child(2n) {
+        color: green;
+    }
+}
+
+.item1 {
+    &:visited {
+        color: red;
+    }
+}
+
+.container {
+    
+
+    .squear {
+        margin: 30px auto;
+        width: 50px;
+        height: 50px;
+        background-color: black;
+        @include animation(
+            $name: test
+        );
+    }
+}
+
+@keyframes test {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes spin {
+    0% {
+        
+    }
+    50% {
+        rotate: 100%;
+    }
+    100% {
+
+    }
+}
+
+
+// .bounce {
+//     text-align: center;
+//     & span {
+//         background-color: black;
+//         display: inline-block;
+//         width: 18px;
+//         height: 18px;
+//         border-radius: 50%;
+//         animation: bounce 1.4s infinite;
+//         @for $i from 1 through 2 {
+//             &:nth-child(#{$i}){
+//                 animation-delay: (-0.32s / $i);
+//             }
+//         }
+//     }
+// }
+
+.spin {
+    text-align: center;
+    & span {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: black;
+        @include animation(spin);
+    }
+}
+
+.stick {
+    text-align: center;
+    & span {
+        margin: 2px;
+        display: inline-block;
+        width: 5px;
+        height: 30px;
+        background-color: black;
+        @for $i from 1 to 6 {
+            &:nth-child(#{$i}){
+                animation-delay: -1.3s + $i*0.2s;
+            }
+        }
+        @include animation(
+            $name: stick
+        )
+    }
+}
+
+@keyframes stick {
+    20% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.7);
+    }
+    80% {
+        transform: scale(1);
+    }
+}
+
+.menu {
+    background-color: transparent;
+    border: none;
+    outline: none !important;
+    cursor: pointer;
+    display: block;
+    margin: 10px 10px 10px auto;
+
+    
+
+    & > span {
+        background-color: black;
+        display: block;
+        width: 35px;
+        height: 5px;
+        margin-top: 9px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+.menu-open {
+    // background-color: saddlebrown;
+    // @include animation(
+    //     $name: menu
+    // );
+    
+    & > span {
+            
+        transition: all 0.3s;
+        &:nth-child(1) {
+            transform: translateY(14px) rotate(135deg);
+        }
+        &:nth-child(2) {
+            transform: scale(0);
+        }
+        &:nth-child(3) {
+            transform: translateY(-14px) rotate(-135deg);
+        }
+    }
+}
+
+
+@keyframes menu {
+    0% {
+        transform: scale(1);
+        // transform: ;
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@import 'apear';
+
+img {
+    max-width: 80%;
+}
+
+
+@import 'scroll';

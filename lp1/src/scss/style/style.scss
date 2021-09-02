@@ -1,0 +1,62 @@
+@import "../bootstrap/bootstrap.scss";
+
+h1 {
+    background-color: sandybrown;
+    color: rgb(48, 92, 65);
+    border: skyblue;
+}
+
+.top img {
+    width: 100%;
+	height: 600px;
+	object-fit: cover;
+}
+
+.top .move {
+    z-index: 1;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    // -webkit-transform: translate(-50%, -50%);
+    // -ms-transform: translate(-50%, -50%);
+    margin: 0;
+    font-weight: 500;
+    font-size: 10vw;
+    color: white;
+
+    .boundletter1 {
+        animation: bound 2s 1 5s;
+        display: inline-block;
+    }
+}
+
+@keyframes bound {
+0% {transform: scale(0) translate(0,-500px);}
+10% {transform: scaleX(2) translate(0,200px);}
+20% {transform: scaleY(.5) translate(0,-100px);}
+30% {transform: scaleX(1.5) translate(0,50px);}
+100% {transform: scale(1) translate(0,0);}
+}
+
+.main-container {
+    margin: 70px 20%;
+}
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+    .main-container {
+        margin: 20px;
+    }
+}
+
+.head-btn {
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    background-color: rgb(139, 218, 218);
+}
+
+.break{
+    overflow-wrap: break-word;
+}

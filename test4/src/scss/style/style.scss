@@ -1,0 +1,120 @@
+.container {
+    margin: 30px;
+    text-align: center;
+}
+
+$cwhite: white;
+$cblack: black;
+$whight: 900;
+$shadow: rgb(180, 180, 180);
+
+.btn {
+    padding: 20px;
+    font-weight: $whight;
+    background-color: $cwhite;
+    border: 1px solid $cblack;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn1 {
+    padding: 20px;
+    font-weight: $whight;
+    color: $cwhite;
+    background-color: $cblack;
+    border: 1px solid $cblack;
+    transition: all 0.3s;
+
+    &:hover {
+        background-color:$cwhite;
+        color: $cblack;
+    }
+}
+
+.btn2 {
+    padding: 20px;
+    background-color: $cwhite;
+    font-weight: $whight;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+        box-shadow: 5px 5px 10px $shadow;
+    }
+}
+
+.btn3 {
+    &:hover {
+        background-color: black;
+        color: $cwhite;
+        letter-spacing: 3px;
+    }
+}
+
+.rect {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin: 0 auto;
+    transform: skew(30deg);
+}
+
+.parent{
+    padding: 30px;
+    .position {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        box-shadow: 5px 5px 0 black;
+    }
+}
+
+// .btn4 {
+//     position: relative;
+//     overflow: hidden;
+//     z-index: 2;
+//     &::before {
+//         content: '';
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         height: 100%;
+//         transform: translateX(-100%);
+//         transition: all 0.3s;
+//         background-color: $cblack;
+//         z-index: -1;
+//     }
+
+//     &:hover {
+//         color: $cwhite;
+//         &::before {
+//             transform: none;
+//         }
+//     }
+// }
+
+.btn4 {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $cblack;
+        display: inline-block;
+        transform: translateX(-100%);
+        transition: all 0.3s;
+        z-index: -1;
+    }
+    &:hover {
+        color: $cwhite;
+        &::before {
+            transform: translateX(0);
+        }
+
+    }
+}
